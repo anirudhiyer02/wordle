@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 reducedSet = []
 solutions = open('wordlist.txt','r')
 for j in solutions:
@@ -9,7 +8,6 @@ for i in reducedSet:
     if (not(i[0] == 't')):
         reducedSet.remove(i)
 print(len(reducedSet))         
-=======
 reducedSet=[]
 solutions=open('wordlist.txt')
 for j in solutions:
@@ -61,6 +59,3 @@ print(reducedSet)
 print(len(reducedSet))
 #print(guess)
 #print(len(lettersContain))
-
-
->>>>>>> 17466507aad8d50824d3452fb8dfbe6e97dd6f87
