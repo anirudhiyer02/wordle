@@ -1,4 +1,10 @@
 reducedSet=[]
+solutions=open('wordlist.txt')
+for j in solutions:
+    j=j[3:8]
+    reducedSet.append(j)
+#reducedSet.remove('which')
+#print(reducedSet[0])
 lettersContain=[]
 correctLetters={}
 correct=True
@@ -19,28 +25,24 @@ for count in range(4):#CHANGE
             print("_", end="")
         else: 
             print("_", end="")
-    if(count==1):
-        solutions = open('wordlist.txt')
-    else:
-        solutions=reducedSet
+    #solutions=open('wordlist.txt') 
     print(lettersContain)
-    for l in solutions:
-        l = l[3:8]
+    #t=0
+    for l in reducedSet:
+        #if(count==0):
+        #l = l[3:8]
         for i in range(5):
-            if(i in correctLetters and len(l)>i):
-                if(not correctLetters[i] == l[i]):
-                    correct=False
+            if(i in correctLetters):
+                if(not correctLetters[i] == l[i] and reducedSet.__contains__(l)):
+                    reducedSet.remove(l)
                     break;
-        for i in range(len(lettersContain)):
-            if (not l.__contains__(lettersContain[i])):
-                correct = False
+        for i in lettersContain:
+            if (not l.__contains__(i) and reducedSet.__contains__(l)):
+                reducedSet.remove(l)
                 break;
-        if (correct and not reducedSet.__contains__(l)):
-            reducedSet.append(l)
-        correct=True
     print(reducedSet)
+    print(len(reducedSet))
     #guess =input("enter guess")
-#helloooooopoooooo
 print(correctLetters)
 print(reducedSet)
 print(len(reducedSet))
