@@ -1,12 +1,5 @@
 reducedSet = []
 solutions = open('wordlist.txt','r')
-for j in solutions:
-    j = j[3:8]
-    reducedSet.append(j)
-for i in reducedSet:
-   # i = i[3:8]
-    if (not(i[0] == 't')):
-        reducedSet.remove(i)
 print(len(reducedSet))         
 reducedSet=[]
 solutions=open('wordlist.txt')
@@ -43,12 +36,12 @@ for count in range(4):#CHANGE
         #l = l[3:8]
         for i in range(5):
             if(i in correctLetters):
-                if(not correctLetters[i] == reducedSet[l][i]):
+                if(not reducedSet[l]==" " and not correctLetters[i] == reducedSet[l][i]):
                     reducedSet[l]=" "
                     
                     break;
         for i in lettersContain:
-            if (not reducedSet[l].__contains__(i)):
+            if (not reducedSet[l]==" " and not reducedSet[l].__contains__(i)):
                 reducedSet[l]=" "
                 break;
     print(reducedSet)
