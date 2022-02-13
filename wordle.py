@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+reducedSet = []
+solutions = open('wordlist.txt','r')
+for j in solutions:
+    j = j[3:8]
+    reducedSet.append(j)
+for i in reducedSet:
+   # i = i[3:8]
+    if (not(i[0] == 't')):
+        reducedSet.remove(i)
+print(len(reducedSet))         
+=======
 reducedSet=[]
 solutions=open('wordlist.txt')
 for j in solutions:
@@ -51,3 +63,4 @@ print(len(reducedSet))
 #print(len(lettersContain))
 
 
+>>>>>>> 17466507aad8d50824d3452fb8dfbe6e97dd6f87
