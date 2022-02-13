@@ -40,7 +40,7 @@ for count in range(4):#CHANGE
         correct=True
     print(reducedSet)
     #guess =input("enter guess")
-
+#helloooooopoooooo
 print(correctLetters)
 print(reducedSet)
 print(len(reducedSet))
