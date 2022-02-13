@@ -14,8 +14,11 @@ correct=True
 solutions=open('wordlist.txt')
 word=input("enter solution\n")#write
 #guess=input("enter guess\n")#think
-for count in range(4):#CHANGE
+for count in range(6):
     guess=input("enter guess\n")#think
+    if(guess==word):
+        print('You have won')
+        break;
     for i in range(5):
         if(word[i]==guess[i]):
             print(word[i], end="")
@@ -38,17 +41,20 @@ for count in range(4):#CHANGE
             if(i in correctLetters):
                 if(not reducedSet[l]==" " and not correctLetters[i] == reducedSet[l][i]):
                     reducedSet[l]=" "
-                    
                     break;
+            #elif(correctLetters.__len__==5):
+             #   print('youve won')
+              #  quit();
         for i in lettersContain:
             if (not reducedSet[l]==" " and not reducedSet[l].__contains__(i)):
                 reducedSet[l]=" "
                 break;
-    print(reducedSet)
-    print(len(reducedSet))
+    #print(reducedSet)
+    #print(len(reducedSet))
     #guess =input("enter guess")
-print(correctLetters)
-print(reducedSet)
-print(len(reducedSet))
+for sol in reducedSet:
+    if(not sol==" "):
+        print(sol)
+        break;
 #print(guess)
 #print(len(lettersContain))
