@@ -17,8 +17,8 @@ for count in range(4):#CHANGE
         if(word[i]==guess[i]):
             print(word[i], end="")
             correctLetters[i]=word[i]
-            if(not lettersContain.__contains__(guess[i])):
-                lettersContain.append(guess[i])
+            #if(not lettersContain.__contains__(guess[i])):
+                #lettersContain.append(guess[i])
             #reducedSet.append(i)
         elif(word.__contains__(guess[i]) and not lettersContain.__contains__(guess[i])):
             lettersContain.append(guess[i])
@@ -28,17 +28,18 @@ for count in range(4):#CHANGE
     #solutions=open('wordlist.txt') 
     print(lettersContain)
     #t=0
-    for l in reducedSet:
+    for l in range(len(reducedSet)):
         #if(count==0):
         #l = l[3:8]
         for i in range(5):
             if(i in correctLetters):
-                if(not correctLetters[i] == l[i] and reducedSet.__contains__(l)):
-                    reducedSet.remove(l)
+                if(not correctLetters[i] == reducedSet[l][i]):
+                    reducedSet[l]=" "
+                    
                     break;
         for i in lettersContain:
-            if (not l.__contains__(i) and reducedSet.__contains__(l)):
-                reducedSet.remove(l)
+            if (not reducedSet[l].__contains__(i)):
+                reducedSet[l]=" "
                 break;
     print(reducedSet)
     print(len(reducedSet))
