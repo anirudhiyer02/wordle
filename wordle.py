@@ -1,3 +1,4 @@
+import random
 reducedSet=[]
 solutions=open('wordlist.txt')
 for s in solutions:
@@ -7,12 +8,16 @@ lettersContain=[]
 correctLetters={}
 correct=True
 solutions=open('wordlist.txt')
+guess=" "
 word=input("enter solution\n")#write
 for count in range(6):
-    guess=input("enter guess\n")#think
+    guess=random.choice(reducedSet)
+    while(guess==" "):
+        guess=random.choice(reducedSet)
+    print(guess)
     if(guess==word):
         print('You have won')
-        break;
+        exit();
     for i in range(5):
         if(word[i]==guess[i]):
             print(word[i], end="")
@@ -33,7 +38,7 @@ for count in range(6):
             if (not reducedSet[l]==" " and not reducedSet[l].__contains__(i)):
                 reducedSet[l]=" "
                 break;
-for sol in reducedSet:
-    if(not sol==" "):
-        print(sol)
-        break;
+sol=random.choice(reducedSet)
+while(sol==" "):
+    sol=random.choice(reducedSet)
+print(sol)
