@@ -39,7 +39,7 @@ for count in range(6):
         guessArray.append(guess)
     print(guess)
     if(guess==word):
-        print('You have won')
+        print('Computer has won')
         exit();
     for i in range(5):
         if(word[i]==guess[i]):
@@ -70,7 +70,8 @@ sol=random.choice(reducedSet)
 while(sol==" "):
     sol=random.choice(reducedSet)
 if(sol==word):
-    print("You have won")
+    print("Computer has won")
 else:
-    print(sol)
+    print("Computer has lost. Answer was ")
+    print(word)
 #print(len(reducedSet))
