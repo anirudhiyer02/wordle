@@ -15,6 +15,7 @@ def elimCheck(list, word):
         if(w in word):
             return False
     return True
+#add
 solutions=open('wordlist.txt')
 guess=" "
 word=input("enter solution\n")#write
