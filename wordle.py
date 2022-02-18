@@ -9,7 +9,6 @@ lettersContain=[]
 correctLetters={}
 guessArray=[]
 correct=True
-u=0
 def elimCheck(list, word):
     for w in list:
         if(w in word):
